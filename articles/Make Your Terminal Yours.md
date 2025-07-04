@@ -12,9 +12,13 @@ If you're still using bash, you might be missing out. Zsh, or the Z shell, is an
 
 Typing the same long commands is tedious and a waste of time. Aliases are essentially shortcuts for commands. You define a short, easy-to-remember alias for a longer command, and your shell will substitute it.
 
-I have a bunch of them in my `.zshrc` file. Here are some of my git-related favorites:
+I have a bunch of them in my `.zshrc` file. Here are some of my favorites:
 
 ```bash
+alias c='clear'
+alias cda='conda activate'
+alias cdn='conda create -yn'
+## Git related
 alias g='git'
 alias ga='git add'
 alias gc='git commit -m'
