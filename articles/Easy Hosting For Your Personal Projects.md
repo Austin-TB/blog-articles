@@ -54,7 +54,6 @@ The main trick: you can deploy **directly from Docker Hub** to Cloud Run and avo
     ```bash
     docker build -t myusername/mybackend:latest .
     docker push myusername/mybackend:latest
-    
     ```
     
 2. Go to the Google Cloud Console → **Cloud Run → Create Service**
@@ -62,21 +61,18 @@ The main trick: you can deploy **directly from Docker Hub** to Cloud Run and avo
     
     ```
     Deploy one revision from an existing container image
-    
     ```
     
 4. Enter your image path:
     
     ```
     docker.io/myusername/myapi:latest
-    
     ```
     
 5. In the **Autoscaling** section, set:
     
     ```
     Maximum number of instances: 1
-    
     ```
     
     That’s your budget protection. Keeps Google from spinning up 50 containers when no one’s using your app.
@@ -88,7 +84,6 @@ You’ll get something like:
 
 ```
 https://mybackend-xyz123.a.run.app
-
 ```
 
 ---
@@ -101,7 +96,6 @@ Example `.env`:
 
 ```
 VITE_API_BASE_URL=https://myapi-xyz123.a.run.app
-
 ```
 
 Then rebuild and redeploy your frontend on Vercel. Done.
@@ -118,11 +112,9 @@ Go to:
 
 ```
 Billing → Budgets & alerts → Create budget
-
 ```
 
 Set something tiny like `$5`. That way, if something loops or scales unexpectedly, you’ll get an email before your card cries.
-
 ---
 
 ## 5. Sanity Tips
@@ -134,7 +126,6 @@ A few random notes from my personal chaos:
     
     ```bash
     docker run -p 8080:8080 myusername/myapi
-    
     ```
     
 - Keep max instances = 1 unless you actually have users.
