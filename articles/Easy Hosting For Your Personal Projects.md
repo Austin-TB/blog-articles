@@ -59,19 +59,19 @@ The main trick: you can deploy **directly from Docker Hub** to Cloud Run and avo
 2. Go to the Google Cloud Console → **Cloud Run → Create Service**
 3. Under “Deployment platform,” choose:
     
-    ```
+    ```bash
     Deploy one revision from an existing container image
     ```
     
 4. Enter your image path:
     
-    ```
+    ```bash
     docker.io/myusername/myapi:latest
     ```
     
 5. In the **Autoscaling** section, set:
     
-    ```
+    ```bash
     Maximum number of instances: 1
     ```
     
@@ -82,7 +82,7 @@ The main trick: you can deploy **directly from Docker Hub** to Cloud Run and avo
 
 You’ll get something like:
 
-```
+```bash
 https://mybackend-xyz123.a.run.app
 ```
 
@@ -94,7 +94,7 @@ Now back in your frontend, just point your API calls to that Cloud Run URL.
 
 Example `.env`:
 
-```
+```bash
 VITE_API_BASE_URL=https://mybackend-xyz123.a.run.app
 ```
 
@@ -110,7 +110,7 @@ Even though Cloud Run’s free tier is generous, it’s smart to set a budget, e
 
 Go to:
 
-```
+```bash
 Billing → Budgets & alerts → Create budget
 ```
 
