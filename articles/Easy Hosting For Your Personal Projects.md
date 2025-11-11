@@ -95,7 +95,7 @@ Now back in your frontend, just point your API calls to that Cloud Run URL.
 Example `.env`:
 
 ```
-VITE_API_BASE_URL=https://myapi-xyz123.a.run.app
+VITE_API_BASE_URL=https://mybackend-xyz123.a.run.app
 ```
 
 Then rebuild and redeploy your frontend on Vercel. Done.
@@ -115,6 +115,7 @@ Billing → Budgets & alerts → Create budget
 ```
 
 Set something tiny like `$5`. That way, if something loops or scales unexpectedly, you’ll get an email before your card cries.
+
 ---
 
 ## 5. Sanity Tips
